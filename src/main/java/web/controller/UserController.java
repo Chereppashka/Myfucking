@@ -13,7 +13,7 @@ import web.service.UserService;
 
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/")
 public class UserController {
     private final UserService userService;
 
@@ -28,7 +28,7 @@ public class UserController {
         return "users";
     }
 
-    @PostMapping("/delete")
+    @GetMapping("/delete")
     public String deleteUser(@ModelAttribute("id") int id) {
         userService.deleteUser(id);
         return "redirect:/";

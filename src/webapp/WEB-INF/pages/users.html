@@ -20,7 +20,7 @@
     <td th:text="${user.getLastName()}"/>
     <td th:text="${user.getEmail()}"/>
     <td>
-      <a th:href="@{/update(id=${user.getId()})}">Update user</a>
+      <a th:href="@{/edit(id=${user.getId()})}">Update user</a>
       <br>
       <a th:href="@{/delete(id=${user.getId()})}">Delete user</a>
     </td>
